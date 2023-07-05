@@ -185,13 +185,23 @@ header .container .nav-b ul li a:hover {
 
 /* intro */
 .intro {
+    height: 100vh;
     position: relative;
+
+}
+
+
+.swiper-horizontal {
+    height: 100%;
+}
+
+.intro .content {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    height: 100vh;
     background-image: url(../img/carousel-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -200,9 +210,22 @@ header .container .nav-b ul li a:hover {
     font-family: var(--heading-font-F);
     z-index: 1;
     margin-bottom: var(--sec-margin);
+    height: 100%;
+    position: relative;
 }
 
-.intro::before {
+.swipe-button {
+    color: var(--main-color) !important;
+    height: 100% !important;
+    translate: 0 -50%;
+    padding-inline: 40px !important;
+}
+
+.intro .SW-2 {
+    background-image: url(../img/blog-1.jpg);
+}
+
+.content::before {
     content: '';
     position: absolute;
     left: 0;
@@ -211,10 +234,6 @@ header .container .nav-b ul li a:hover {
     height: 100%;
     background-color: rgba(34, 36, 41, .8);
     z-index: -1;
-}
-
-.intro .content {
-    text-align: center;
 }
 
 .intro .content h4 {
@@ -658,11 +677,13 @@ header .container .nav-b ul li a:hover {
 .trainers .tra-info .trainer .social a:last-child:hover {
     color: #C13584;
 }
+
 /* Blog */
 .blog {
     padding: var(--sec-padding) 0;
     margin-bottom: var(--sec-margin);
 }
+
 .blog .heading {
     text-align: center;
     padding-bottom: 6rem;
@@ -678,24 +699,29 @@ header .container .nav-b ul li a:hover {
     font-size: 60px;
     color: var(--dark-color);
 }
+
 .blog .container .boxs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
+
 .blog .container .boxs .box {
     overflow: hidden;
     border-radius: .25rem;
 }
+
 .blog .container .boxs .box img {
     max-width: 100%;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     transition: var(--main-transition);
 }
+
 .blog .container .boxs .box:hover img {
     transform: scale(1.15)
 }
+
 .blog .container .boxs .box .content {
     position: relative;
     top: -5px;
@@ -708,11 +734,13 @@ header .container .nav-b ul li a:hover {
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
 }
+
 .blog .container .boxs .box .content .left {
     text-align: center;
     line-height: 1.5;
     position: relative;
 }
+
 .blog .container .boxs .box .content .left::before {
     content: '';
     position: absolute;
@@ -722,56 +750,69 @@ header .container .nav-b ul li a:hover {
     height: 100%;
     background-color: #dee2e6;
 }
+
 .blog .container .boxs .box .content .left span:first-child,
 .blog .container .boxs .box .content .left span:last-child {
     color: var(--light-gray-text-color);
 }
+
 .blog .container .boxs .box .content h2 {
     font-size: 22px;
     font-family: var(--heading-font-F);
 }
+
 /* Footer */
 footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: var(--dark-color);
 }
+
 footer h1 {
     color: var(--white-color) !important;
     margin-bottom: 1.5rem;
 }
+
 footer .container {
     display: flex;
     justify-content: space-between;
 }
+
 footer .container .getIn .info {
     display: flex;
     flex-direction: column;
     gap: .8rem;
 }
+
 footer .container,
 footer .container a {
     color: var(--light-gray-text-color);
 }
+
 footer .container .quick_links ul li {
     margin-bottom: .8rem;
 }
+
 footer .container .newsletter {
     text-align: center;
     color: var(--white-color);
 }
+
 footer .container .newsletter h3 {
     font-weight: normal;
 }
+
 footer .container .newsletter p {
     max-width: 350px;
     margin: 10px;
 
 }
+
 footer .container .newsletter form {
     display: flex;
     justify-content: center;
 }
+
 footer .container .newsletter form input {
     padding: 15px;
     border-top-left-radius: .25rem;
@@ -780,9 +821,11 @@ footer .container .newsletter form input {
     caret-color: var(--main-color);
     border: none;
 }
+
 footer .container .newsletter form input:focus {
     outline: none;
 }
+
 footer .container .newsletter form button {
     border: none;
     padding: 15px 10px;
@@ -792,6 +835,7 @@ footer .container .newsletter form button {
     background-color: var(--main-color);
     cursor: pointer;
 }
+
 @media (min-width: 991px) {
     .hamburger {
         display: none;
@@ -896,7 +940,7 @@ footer .container .newsletter form button {
         font-size: 40px;
     }
 
-    .intro {
+    .intro .content {
         padding: 0 15px;
     }
 }
@@ -968,9 +1012,11 @@ footer .container .newsletter form button {
     .about .bottom .container .columns {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
+
     .blog .container .boxs {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
+
     .trainers .tra-info {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
@@ -980,21 +1026,25 @@ footer .container .newsletter form button {
     .about .bottom .container .columns .col {
         padding: 45px 20px;
     }
+
     .hours .container .top h1 {
         font-size: 45px;
     }
+
     .trainers .heading h1 {
         font-size: 45px;
     }
+
     .blog .heading h1 {
         font-size: 45px;
     }
 }
+
 @media (max-width: 850px) {
     footer .container {
         flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 32px;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
     }
 }
